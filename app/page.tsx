@@ -36,6 +36,10 @@ const projects = [
     ],
     links: [
       {
+        label: "Démo live",
+        href: "https://lavage-auto-web.onrender.com/",
+      },
+      {
         label: "Code GitHub",
         href: "https://github.com/mwagala/lavage_auto_h2026",
       },

@@ -10,6 +10,7 @@ test("portfolio source contains the recruiter-facing content", async () => {
   assert.match(page, /Soumissions Agent/);
   assert.match(page, /Tic-tac-toe de révélation/);
   assert.match(page, /Application de gestion immobilière/);
+  assert.match(page, /https:\/\/lavage-auto-web\.onrender\.com\//);
   assert.match(page, /href="\/cv-morel-wagala\.pdf"/);
 });
 
