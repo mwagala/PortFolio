@@ -243,11 +243,11 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="section-kicker">Projets personnels</span>
-            <h2>Répertoire des projets du dossier</h2>
+            <h2>Répertoire des projets</h2>
           </div>
           <p>
-            Utilise les filtres pour lire le portfolio selon le type de
-            compétence que tu veux mettre de l'avant dans une candidature.
+            Utilisez les filtres pour lire le portfolio selon le type de
+            compétence que vous voulez mettre de l'avant.
           </p>
         </div>
 
