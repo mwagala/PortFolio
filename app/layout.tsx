@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Morel Wagala | Portfolio logiciel",
     description:
-      "Applications d'affaires, automatisation, jeux web et projets full-stack orientés stage en génie logiciel.",
+      "Deux projets full-stack de Morel Wagala : YabaImmo et une plateforme de réservation de lavage auto à domicile.",
     type: "website",
   },
 };

@@ -10,7 +10,6 @@ const projects = [
   {
     title: "Réservation de lavage auto à domicile",
     type: "Application d'affaires full-stack",
-    className: "fullstack",
     status: "Fondations livrées",
     year: "2026",
     summary:
@@ -49,78 +48,34 @@ const projects = [
     previewLines: ["Auth", "Reservations", "Outbox", "Health checks"],
   },
   {
-    title: "Soumissions Agent",
-    type: "Automatisation et mini-CRM",
-    className: "automation",
-    status: "MVP fonctionnel",
+    title: "YabaImmo",
+    type: "Application de gestion immobilière",
+    status: "Fonctionnel",
     year: "2026",
     summary:
-      "Application Streamlit qui aide une entreprise d'entretien ménager à traiter les demandes de soumission reçues par courriel.",
+      "Application web qui centralise le suivi des immeubles, des logements, des locataires et des baux pour les gestionnaires immobiliers.",
     impact:
-      "Le projet montre la capacité à transformer un processus manuel en workflow contrôlé avec validation humaine et intégrations prêtes à brancher.",
+      "Le tableau de bord rapproche les loyers attendus, les paiements reçus et les dépenses par immeuble et par période.",
     highlights: [
-      "Import de courriels via fournisseur interchangeable et mode démo local.",
-      "Classification, extraction de données client et création de prospects.",
-      "Mini-CRM SQLite avec statuts, rendez-vous, relances et pièces jointes.",
-      "Adaptateur Microsoft Graph, rôles applicatifs et tests unitaires.",
+      "Suivi des baux, historique d'occupation, paiements partiels et alertes de retard.",
+      "Gestion des dépenses récurrentes, des interventions de maintenance et des fournisseurs.",
+      "Import Excel avec prévisualisation, rapports financiers et exports CSV/PDF.",
+      "Gestion de plusieurs pays et devises, droits d'accès par rôle et par pays, et journal d'audit.",
     ],
     stack: [
-      "Python",
-      "Streamlit",
-      "SQLite",
-      "Microsoft Graph",
+      "TypeScript",
+      "Next.js",
+      "React",
+      "PostgreSQL",
+      "Prisma",
       "Docker",
-      "Pytest",
-      "OAuth",
+      "Vitest",
+      "Playwright",
     ],
     links: [],
     accent: "blue",
-    previewTitle: "Lead workflow",
-    previewLines: ["Inbox", "Extraction", "CRM", "Calendar"],
-  },
-  {
-    title: "Tic-tac-toe de révélation",
-    type: "Jeu web événementiel",
-    className: "game",
-    status: "Prototype jouable",
-    year: "2026",
-    summary:
-      "Jeu web autonome pour révélation fille/garçon, avec logique tic-tac-toe, audio, écran public et animation finale.",
-    impact:
-      "Un projet plus créatif qui démontre l'attention à l'expérience utilisateur, à l'état d'interface et aux contraintes d'un événement réel.",
-    highlights: [
-      "Issue secrète configurée dans un champ admin masqué.",
-      "Musique, effets sonores, voix et volumes séparés.",
-      "Import optionnel d'invités en txt, csv, tsv ou xlsx.",
-      "Règles de révélation adaptées pour éviter une fin anticlimatique.",
-    ],
-    stack: ["HTML", "CSS", "JavaScript", "Audio web", "ElevenLabs clips"],
-    links: [],
-    accent: "coral",
-    previewTitle: "Reveal game",
-    previewLines: ["Grid", "Secret", "Voice", "Finale"],
-  },
-  {
-    title: "Application de gestion immobilière",
-    type: "Projet à documenter",
-    className: "upcoming",
-    status: "Dossier détecté",
-    year: "À préciser",
-    summary:
-      "Dossier présent dans l'espace de projets, mais sans fichiers lisibles localement au moment de générer ce portfolio.",
-    impact:
-      "La carte est prête pour accueillir le contexte fonctionnel, la stack et les liens dès que le contenu sera synchronisé ou documenté.",
-    highlights: [
-      "Ajouter le problème métier visé.",
-      "Ajouter les principales fonctionnalités.",
-      "Ajouter la stack et les décisions d'architecture.",
-      "Ajouter un lien GitHub ou une démonstration si disponible.",
-    ],
-    stack: ["À compléter"],
-    links: [],
-    accent: "violet",
-    previewTitle: "Next case study",
-    previewLines: ["Domain", "Features", "Stack", "Demo"],
+    previewTitle: "Gestion locative",
+    previewLines: ["Immeubles", "Baux et loyers", "Maintenance", "Rapports"],
   },
 ];
 
@@ -131,10 +86,13 @@ const skills = [
   "Python",
   "Flask",
   "JavaScript",
+  "TypeScript",
+  "Next.js",
   "React",
   "Vue.js",
   "Node.js",
   "SQL Server",
+  "PostgreSQL",
   "MySQL",
   "Oracle",
   "Docker",
@@ -201,22 +159,22 @@ export default function Home() {
               <strong>Full-stack junior</strong>
             </div>
             <p>
-              C#/.NET, SQL, JavaScript et Python, avec projets concrets en
-              Flask, Streamlit, Docker et intégrations API.
+              C#/.NET, SQL, TypeScript et Python, avec des applications web
+              développées avec Flask et Next.js.
             </p>
           </div>
           <div className="metrics-grid" aria-label="Résumé des projets">
             <div>
-              <strong>4</strong>
-              <span>dossiers référencés</span>
+              <strong>{projects.length}</strong>
+              <span>projets présentés</span>
             </div>
             <div>
-              <strong>3</strong>
-              <span>projets documentés</span>
+              <strong>Next.js</strong>
+              <span>gestion immobilière</span>
             </div>
             <div>
-              <strong>Python</strong>
-              <span>backend et automatisation</span>
+              <strong>Flask</strong>
+              <span>réservation et traitements asynchrones</span>
             </div>
             <div>
               <strong>SQL</strong>
@@ -245,32 +203,11 @@ export default function Home() {
             <span className="section-kicker">Projets personnels</span>
             <h2>Répertoire des projets</h2>
           </div>
-          <p>
-            Utilisez les filtres pour lire le portfolio selon le type de
-            compétence que vous voulez mettre de l'avant.
-          </p>
         </div>
-
-        <fieldset className="filters" aria-label="Filtrer les projets">
-          <legend>Filtrer</legend>
-          <input defaultChecked id="filter-all" name="project-filter" type="radio" />
-          <label htmlFor="filter-all">Tous</label>
-          <input id="filter-fullstack" name="project-filter" type="radio" />
-          <label htmlFor="filter-fullstack">Full-stack</label>
-          <input id="filter-automation" name="project-filter" type="radio" />
-          <label htmlFor="filter-automation">Automatisation</label>
-          <input id="filter-game" name="project-filter" type="radio" />
-          <label htmlFor="filter-game">Jeu web</label>
-          <input id="filter-upcoming" name="project-filter" type="radio" />
-          <label htmlFor="filter-upcoming">À documenter</label>
-        </fieldset>
 
         <div className="project-grid">
           {projects.map((project) => (
-            <article
-              className={`project-card ${project.className}`}
-              key={project.title}
-            >
+            <article className="project-card" key={project.title}>
               <div className={`project-visual ${project.accent}`} aria-hidden="true">
                 <div className="window-bar">
                   <span />
@@ -307,9 +244,9 @@ export default function Home() {
                     <span key={tech}>{tech}</span>
                   ))}
                 </div>
-                <div className="project-links">
-                  {project.links.length > 0 ? (
-                    project.links.map((link) => (
+                {project.links.length > 0 && (
+                  <div className="project-links">
+                    {project.links.map((link) => (
                       <a
                         className="text-link"
                         href={link.href}
@@ -319,11 +256,9 @@ export default function Home() {
                       >
                         {link.label}
                       </a>
-                    ))
-                  ) : (
-                    <span className="muted-link">Lien public à ajouter</span>
-                  )}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </article>
           ))}
