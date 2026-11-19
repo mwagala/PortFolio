@@ -9,9 +9,14 @@ test("portfolio source contains the recruiter-facing content", async () => {
   assert.match(page, /Réservation de lavage auto à domicile/);
   assert.match(page, /YabaImmo/);
   assert.match(page, /Application de gestion immobilière/);
-  assert.doesNotMatch(page, /Soumissions Agent|Tic-tac-toe de révélation|project-filter/);
+  assert.match(page, /Tic-tac-toe de révélation/);
+  assert.doesNotMatch(page, /Soumissions Agent|project-filter/);
   assert.match(page, /https:\/\/lavage-auto-web\.onrender\.com\//);
   assert.match(page, /href="\/cv-morel-wagala\.pdf"/);
+  assert.match(page, /avril 2027/i);
+  assert.match(page, /Ressources naturelles et des Forêts/);
+  assert.match(page, /linkedin\.com\/in\/morel-wagala-1b5025235/);
+  assert.doesNotMatch(page, /Bell Solutions Techniques|Certificat en informatique/);
 });
 
 test("project is configured for Vercel-compatible Next.js", async () => {

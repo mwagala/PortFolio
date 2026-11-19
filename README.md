@@ -15,6 +15,7 @@ candidatures de stage en génie logiciel.
 - Présentation professionnelle orientée recruteur.
 - YabaImmo, application de gestion immobilière.
 - Plateforme de réservation de lavage auto à domicile.
+- Tic-tac-toe de révélation, jeu web événementiel.
 - Section compétences.
 - Parcours de formation et expériences.
 - CV téléchargeable depuis `public/cv-morel-wagala.pdf`.

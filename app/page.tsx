@@ -3,19 +3,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Morel Wagala | Projets personnels",
   description:
-    "Portfolio de projets personnels pour candidatures de stage en génie logiciel.",
+    "Portfolio de Morel Wagala, étudiant en informatique à l'Université Laval et développeur logiciel full-stack à Québec.",
 };
 
 const projects = [
   {
     title: "Réservation de lavage auto à domicile",
     type: "Application d'affaires full-stack",
-    status: "Fondations livrées",
-    year: "2026",
+    status: "Déployée",
+    year: "2025",
     summary:
       "Plateforme web pour réserver des services de lavage auto à domicile, avec parcours client, prestataire et administration technique.",
     impact:
-      "Le projet met en avant une architecture Flask structurée, une base PostgreSQL, des traitements asynchrones et une vraie discipline de qualité.",
+      "Celery et Redis traitent les événements de réservation en arrière-plan, sans bloquer le parcours utilisateur.",
     highlights: [
       "Authentification JWT, profils client/prestataire et validation des données.",
       "Réservations, disponibilités, services, commentaires et factures.",
@@ -26,6 +26,7 @@ const projects = [
       "Python",
       "Flask",
       "Jinja",
+      "Vue.js",
       "PostgreSQL",
       "Redis",
       "Celery",
@@ -53,7 +54,7 @@ const projects = [
     status: "Fonctionnel",
     year: "2026",
     summary:
-      "Application web qui centralise le suivi des immeubles, des logements, des locataires et des baux pour les gestionnaires immobiliers.",
+      "Application web full-stack conçue pour gérer des immeubles locatifs, leurs logements, leurs locataires et leurs baux.",
     impact:
       "Le tableau de bord rapproche les loyers attendus, les paiements reçus et les dépenses par immeuble et par période.",
     highlights: [
@@ -61,6 +62,7 @@ const projects = [
       "Gestion des dépenses récurrentes, des interventions de maintenance et des fournisseurs.",
       "Import Excel avec prévisualisation, rapports financiers et exports CSV/PDF.",
       "Gestion de plusieurs pays et devises, droits d'accès par rôle et par pays, et journal d'audit.",
+      "Contrôles qualité automatisés avec GitHub Actions et environnement portable avec Docker.",
     ],
     stack: [
       "TypeScript",
@@ -77,28 +79,45 @@ const projects = [
     previewTitle: "Gestion locative",
     previewLines: ["Immeubles", "Baux et loyers", "Maintenance", "Rapports"],
   },
+  {
+    title: "Tic-tac-toe de révélation",
+    type: "Jeu web événementiel",
+    status: "Prototype jouable",
+    year: "2026",
+    summary:
+      "Jeu de tic-tac-toe autonome conçu pour annoncer le sexe d'un bébé lors d'un événement.",
+    impact:
+      "L'organisateur configure la révélation à l'avance. Les invités découvrent le résultat dans une animation finale.",
+    highlights: [
+      "Grille interactive et affichage public qui garde le résultat secret jusqu'à la révélation.",
+      "Annonces vocales, musique de fond et effets sonores avec réglages de volume indépendants.",
+      "Import facultatif d'une liste d'invités pour personnaliser les remerciements.",
+    ],
+    stack: ["HTML", "CSS", "JavaScript", "Web Audio API"],
+    links: [],
+    accent: "coral",
+    previewTitle: "Jeu de révélation",
+    previewLines: ["Grille", "Annonces vocales", "Révélation", "Remerciements"],
+  },
 ];
 
 const skills = [
-  "Java",
   "C#",
-  ".NET",
-  "Python",
-  "Flask",
+  "Java",
   "JavaScript",
   "TypeScript",
-  "Next.js",
+  ".NET",
   "React",
+  "Angular",
   "Vue.js",
-  "Node.js",
-  "SQL Server",
-  "PostgreSQL",
-  "MySQL",
-  "Oracle",
-  "Docker",
+  "Next.js",
+  "Flask/Jinja",
+  "NUnit",
+  "JUnit",
   "Git/GitHub",
-  "API REST",
-  "Tests",
+  "Docker",
+  "Visual Studio",
+  "VS Code",
 ];
 
 export default function Home() {
@@ -120,21 +139,19 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Portfolio de projets personnels</p>
-          <h1>
-            Développeur logiciel junior full-stack orienté applications
-            d'affaires.
-          </h1>
+          <h1>Développeur logiciel full-stack</h1>
           <p className="hero-lede">
-            Futur gradué en informatique à Québec, je construis des applications
-            web, API, workflows automatisés et interfaces utiles avec une
-            attention particulière à la qualité, aux bases de données et à la
-            maintenabilité.
+            J'étudie en informatique à l'Université Laval et je prévois obtenir
+            mon diplôme en avril 2027. À l'automne 2026, je contribue à la
+            modernisation d'une application interne avec Angular et .NET dans
+            le cadre de mon stage au ministère des Ressources naturelles et des
+            Forêts.
           </p>
           <div className="hero-actions" aria-label="Actions principales">
             <a className="button primary" href="#projets">
               Voir les projets
             </a>
-            <a className="button" href="/cv-morel-wagala.pdf">
+            <a className="button" href="/cv-morel-wagala.pdf" download>
               Télécharger le CV
             </a>
             <a
@@ -151,16 +168,16 @@ export default function Home() {
         <aside className="hero-panel" aria-label="Résumé professionnel">
           <div className="availability">
             <span className="signal" aria-hidden="true" />
-            Ouvert aux stages en génie logiciel
+            Québec, QC
           </div>
           <div className="profile-card">
             <div>
               <span className="profile-label">Profil</span>
-              <strong>Full-stack junior</strong>
+              <strong>Développement web</strong>
             </div>
             <p>
-              C#/.NET, SQL, TypeScript et Python, avec des applications web
-              développées avec Flask et Next.js.
+              Angular et .NET en stage. Next.js, React, Python et Vue.js en
+              projets personnels.
             </p>
           </div>
           <div className="metrics-grid" aria-label="Résumé des projets">
@@ -173,7 +190,7 @@ export default function Home() {
               <span>gestion immobilière</span>
             </div>
             <div>
-              <strong>Flask</strong>
+              <strong>Python</strong>
               <span>réservation et traitements asynchrones</span>
             </div>
             <div>
@@ -269,12 +286,8 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="section-kicker">Compétences</span>
-            <h2>Stack technique</h2>
+            <h2>Compétences techniques</h2>
           </div>
-          <p>
-            Les compétences proviennent du CV et des projets locaux analysés dans
-            ce dossier.
-          </p>
         </div>
         <div className="skills-cloud">
           {skills.map((skill) => (
@@ -287,41 +300,47 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="section-kicker">Parcours</span>
-            <h2>Formation et expérience</h2>
+            <h2>Formation, expérience et compétitions</h2>
           </div>
-          <p>
-            Un profil construit à la jonction du service, des opérations et du
-            développement logiciel.
-          </p>
         </div>
         <div className="timeline">
           <article>
-            <span>2023 - présent</span>
-            <h3>BAC en informatique</h3>
-            <p>Université Laval, avec spécialisation progressive en développement logiciel.</p>
-          </article>
-          <article>
-            <span>2025</span>
-            <h3>Certificat en informatique</h3>
-            <p>Université Laval.</p>
+            <span>Diplôme prévu en avril 2027</span>
+            <h3>Baccalauréat en informatique</h3>
+            <p>Université Laval, Québec.</p>
           </article>
           <article>
             <span>Automne 2026</span>
-            <h3>DEC - Programmation, bases de données et serveurs</h3>
-            <p>Cégep de Ste-Foy.</p>
-          </article>
-          <article>
-            <span>2024 - présent</span>
-            <h3>Agent administratif - CHUL</h3>
+            <h3>Stage en développement logiciel full-stack</h3>
+            <p>Ministère des Ressources naturelles et des Forêts, Québec.</p>
             <p>
-              Gestion de dossiers, coordination d'intervenants et suivi
-              administratif avec Excel.
+              Refonte d'écrans Oracle Forms en pages web Angular et .NET,
+              documentation technique et optimisation des requêtes en base de
+              données.
             </p>
           </article>
           <article>
-            <span>2023 - 2024</span>
-            <h3>Agent logistique - Bell Solutions Techniques</h3>
-            <p>Gestion d'inventaire, coordination des équipements et des véhicules.</p>
+            <span>Depuis 2024</span>
+            <h3>Agent administratif au CHUL</h3>
+            <p>
+              À temps partiel à Québec. Service aux usagers, gestion des
+              dossiers médicaux aux admissions et aux départs, et priorisation
+              des demandes et des appels.
+            </p>
+          </article>
+          <article>
+            <span>Octobre 2026</span>
+            <h3>Hackathon de Québec International</h3>
+            <p>
+              Développement en équipe d'une application pour faciliter la
+              collaboration entre les organismes et les commerces du quartier
+              Saint-Roch. Présentation de la solution au jury.
+            </p>
+          </article>
+          <article>
+            <span>Janvier 2027 (prévu)</span>
+            <h3>Coveo Blitz</h3>
+            <p>Compétition d'algorithmique en équipe à Montréal.</p>
           </article>
         </div>
       </section>
@@ -329,10 +348,9 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div>
           <span className="section-kicker">Contact</span>
-          <h2>Disponible pour discuter d'un stage.</h2>
+          <h2>Me joindre</h2>
           <p>
-            Français langue maternelle, anglais en lecture avancée et
-            communication intermédiaire.
+            Français langue maternelle et anglais fonctionnel.
           </p>
         </div>
         <div className="contact-actions">
@@ -341,6 +359,14 @@ export default function Home() {
           </a>
           <a className="button" href="tel:+14389924788">
             (438) 992-4788
+          </a>
+          <a
+            className="button ghost"
+            href="https://www.linkedin.com/in/morel-wagala-1b5025235"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
           </a>
           <a
             className="button ghost"

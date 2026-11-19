@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Morel Wagala | Portfolio logiciel",
   description:
-    "Portfolio de projets personnels de Morel Wagala, développeur logiciel junior full-stack à Québec.",
+    "Portfolio de Morel Wagala, étudiant en informatique à l'Université Laval et développeur logiciel full-stack à Québec.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Morel Wagala | Portfolio logiciel",
     description:
-      "Deux projets full-stack de Morel Wagala : YabaImmo et une plateforme de réservation de lavage auto à domicile.",
+      "Les projets de Morel Wagala comprennent YabaImmo, une plateforme de réservation de lavage auto à domicile et un jeu de tic-tac-toe événementiel.",
     type: "website",
   },
 };
